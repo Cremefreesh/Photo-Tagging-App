@@ -1,4 +1,8 @@
-
+function image(imageId, charId, coordinates) {
+  this.imageId = imageId;
+  this.charId = charId;
+  this.coordinates = coordinates;
+}
 
 const imageSchema = new mongoose.Schema({
   imageID: {

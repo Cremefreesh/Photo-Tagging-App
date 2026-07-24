@@ -9,4 +9,11 @@ imageRouter.get("/:imageId", (req, res) => {
   res.send(`Image ID: ${imageId}`);
 });
 
+
+imageRouter.get("/:imageId", (req, res) => {
+  const { imageId } = req.params;
+  res.send(`Image ID: ${imageId}`);
+});
+
+
 module.exports = imageRouter;
