@@ -16,10 +16,18 @@ const chars = [
 ];
 
 
-
 async function getCharPositionById(charId) {
   return chars.find(char => char.cordinates.x && char.cordinates.y && char.id === charId);
 };
 
+const query = 'SELECT coordinates FROM chars WHERE id === images.charIDs AND images.id === currentImageId';
+
+connect.query(query, (err, result) => {
+  if (err) {
+    console.error('Error executing query:', err);
+    return;
+  }
+  console.log('Query result:', result);
+});
 
 module.exports = { getCharPositionById };
